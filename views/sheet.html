@@ -1,0 +1,29 @@
+<div>
+    <table>
+        <tr>
+            <td>ROWS: <input type="text" ng-model="myCtrl.rows" style="width:50px"/></td>
+            <td>COLUMNS: <input type="text" ng-model="myCtrl.columns" style="width:50px"/></td>
+            <td><input type="button" value="create" ng-click="myCtrl.createGrid()"/></td>
+        </tr>
+    </table>
+    <table class="grid">
+        <tr>
+            <td style="border:0px"></td>
+            <td ng-repeat="column in myCtrl.sheetMatrices[0]" style="border:0px">
+                <a href ng-click="myCtrl.add('COLUMN',$index)">Add</a>/
+                <a href ng-click="myCtrl.delete('COLUMN',$index)">Del</a>/
+                <a href ng-click="myCtrl.sort('COLUMN',$index)">Sort</a>
+            </td>
+        </tr>
+        <tr ng-repeat="row in myCtrl.sheetMatrices">
+            <td style="border:0px">
+                <a href ng-click="myCtrl.add('ROW',$index)">Add</a>/
+                <a href ng-click="myCtrl.delete('ROW',$index)">Del</a>/
+                <a href ng-click="myCtrl.sort('ROW',$index)">Sort</a>
+            </td>
+            <td ng-repeat="column in row">
+                <div cell style="height: 100%" cell-obj="column"></div>
+            </td>
+        </tr>
+    </table>
+</div>
