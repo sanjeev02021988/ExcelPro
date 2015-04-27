@@ -3,8 +3,8 @@ angular.module("myApp")
       function(){
           var self = this;
           this.sheetMatrices = [];
-          this.rows = 5;
-          this.columns = 5;
+          this.rows = 6;
+          this.columns = 6;
           var isRowsSorted = [];
           var isColumnsSorted = [];
           this.createGrid = function (){
