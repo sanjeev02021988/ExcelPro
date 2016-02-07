@@ -8,15 +8,15 @@
     </table>
     <table class="grid">
         <tr>
-            <td style="border:0px"></td>
-            <td ng-repeat="column in myCtrl.sheetMatrices[0]" style="border:0px">
+            <td></td>
+            <td ng-repeat="column in myCtrl.sheetMatrices[0]">
                 <a href ng-click="myCtrl.add('COLUMN',$index)">Add</a>/
                 <a href ng-click="myCtrl.delete('COLUMN',$index)">Del</a>/
                 <a href ng-click="myCtrl.sort('COLUMN',$index)">Sort</a>
             </td>
         </tr>
         <tr ng-repeat="row in myCtrl.sheetMatrices">
-            <td style="border:0px">
+            <td>
                 <a href ng-click="myCtrl.add('ROW',$index)">Add</a>/
                 <a href ng-click="myCtrl.delete('ROW',$index)">Del</a>/
                 <a href ng-click="myCtrl.sort('ROW',$index)">Sort</a>

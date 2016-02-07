@@ -19,7 +19,7 @@ angular.module("myApp").directive("cell",[
             template:
                 "<div ng-click='fnEditingCellsName();'>" +
                     "<span ng-hide='editingCellsName' ng-bind='cellObj.value' style='height:100%'></span>" +
-                    "<input type='text' ng-show='editingCellsName' ng-model='cellObj.value' ng-keypress='fnDoneEditingCellsName($event)' ng-blur='fnDoneEditingCellsName($event)' style='width:95%;'/>"+
+                    "<input type='text' ng-show='editingCellsName' ng-model='cellObj.value' ng-keypress='fnDoneEditingCellsName($event)' ng-blur='fnDoneEditingCellsName($event)'/>"+
                 "</div>",
             link:function($scope,$element,attr){
             }

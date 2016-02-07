@@ -8,7 +8,7 @@ angular.module('myApp', ['ui.router'])
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
-            .state('Login',{
+            .state('Sheet',{
                 url: "/",
                 controller:'myController as myCtrl',
                 templateUrl:'./views/sheet.html'
